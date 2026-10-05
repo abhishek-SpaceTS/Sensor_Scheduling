@@ -1,0 +1,18 @@
+# Space-Based Space Surveillance (SDA) Sensor Configuration
+
+space_sensors:
+  - id: "M4V"
+    name: "M4V Spacecraft"
+    type: "optical_camera"
+    
+    # Defining the sensor's own orbit
+    custom_orbit:
+      altitude_km: 550.0       # Orbiting right in the middle of our target 500-600km band
+
+    # Physical sensor limitations based on your specifications
+    field_of_view_deg: 35.0        # Wide-angle optical camera
+    max_tracking_range_km: 50.0    # Short-range proximity tracking (50km max)
+    
+    # Exclusion zones (to prevent blinding the camera)
+    sun_exclusion_angle_deg: 30.0
+    earth_exclusion_angle_deg: 5.0
