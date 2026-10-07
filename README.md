@@ -23,7 +23,7 @@ This repository provides a complete pipeline:
 * **Real Orbital Data**: Directly parses live CelesTrak `leo.txt` catalogs.
 * **SGP4 Propagation**: Built on `skyfield` for accurate Earth-Centered Inertial (ECI) coordinate geometry.
 * **Contiguous Window Grouping**: Algorithmically compresses thousands of 30-second physics ticks into clean, continuous observation windows.
-* **CP-SAT Optimizer**: A classic Operations Research solver that generates perfect "Answer Key" labels for training.
+* **Continuous-Time CP-SAT Optimizer**: A mathematically perfect OR-Tools solver utilizing `IntervalVar` logic to dynamically stretch observation times and calculate physical ADCS slew gaps to generate perfect "Answer Key" labels for training.
 * **Modular Configuration**: Dynamically loads payload, ADCS, and EPS parameters from simple YAML files.
 
 ---
@@ -40,6 +40,7 @@ This repository provides a complete pipeline:
 │   ├── orbit/               # SGP4 Propagators and 3D math
 │   ├── sensor/              # Visibility geometry engine
 │   └── scheduling/          # OR-Tools (Teacher) & PyTorch (Student) Models
+├── main.py                  # The Master Pipeline Orchestrator
 └── README.md
 ```
 
@@ -49,8 +50,8 @@ This repository provides a complete pipeline:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sda-sensor-scheduling.git
-cd sda-sensor-scheduling
+git clone https://github.com/abhishek-SpaceTS/Sensor_Scheduling.git
+cd Sensor_Scheduling
 ```
 
 2. Install the required dependencies:
@@ -63,31 +64,18 @@ pip install -r requirements.txt
 
 ## 💻 Usage Pipeline
 
-Follow this pipeline to generate data and train the AI:
+Follow this pipeline to run the project. We have provided a central orchestrator script (`main.py`) that handles the complex scheduling steps automatically.
 
-**1. Fetch the Target Catalog**
-Downloads the latest active LEO catalog from CelesTrak and filters it to a specific altitude band (e.g., 500-600km).
+**1. Fetch Targets & Run Physics Engine**
+*(Use `src/sensor/visibility.py` or synthetic generators to build raw visibility windows)*
+
+**2. Run the Master Orchestrator**
+This single command automatically runs **Phase 1** (The OR-Tools Math Teacher) to generate the perfect mathematical schedules based on continuous-time interval logic. It then immediately proceeds to **Phase 2** (The PyTorch AI Student) to train the Neural Network on the newly generated Answer Keys.
 ```bash
-python src/data/celestrak_api.py
+python main.py
 ```
 
-**2. Run the Physics Engine (Visibility Windows)**
-Propagates the targets against the M4V inspector satellite to find physical intercepts. 
-```bash
-python src/sensor/visibility.py
-```
-
-**3. Generate the Answer Keys (The Teacher)**
-Uses Google OR-Tools to solve the Orienteering Problem and find the optimal schedule.
-```bash
-python src/scheduling/ortools_scheduler.py
-```
-
-**4. Train the AI (The Student)**
-Trains a PyTorch Neural Network to mimic the Teacher's scheduling logic.
-```bash
-python src/scheduling/ai_scheduler.py
-```
+*(Note: If you want to train the AI manually or test individual scripts, they are still accessible inside `src/scheduling/`)*
 
 ---
 
