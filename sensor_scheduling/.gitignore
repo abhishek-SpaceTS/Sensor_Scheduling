@@ -31,3 +31,10 @@ data/processed/scheduling_dataset/*.json
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Generated Complex Data
+complex_scenarios/*.json
+data/processed/complex_labels/*.json
+models/
+*.csv
+*.png

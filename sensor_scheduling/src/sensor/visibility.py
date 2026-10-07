@@ -79,6 +79,12 @@ def generate_scenario(scenario_id, propagator, m4v_sat, max_range_km, tle_path):
                 name = target.name
                 current_seen.add(name)
                 
+                dx = target_pos[0] - m4v_pos[0]
+                dy = target_pos[1] - m4v_pos[1]
+                dz = target_pos[2] - m4v_pos[2]
+                mag = max(distance_km, 0.0001) # prevent div by zero
+                dir_vec = [dx/mag, dy/mag, dz/mag]
+                
                 # If we just saw this target for the first time
                 if name not in active_windows:
                     active_windows[name] = {
@@ -86,7 +92,8 @@ def generate_scenario(scenario_id, propagator, m4v_sat, max_range_km, tle_path):
                         "start_time": t,
                         "end_time": t,
                         "min_distance_km": distance_km,
-                        "priority_value": random.randint(1, 100)
+                        "priority_value": random.randint(1, 100),
+                        "direction_vector": dir_vec
                     }
                     print(f"  [ACCESS START] {name} entered range at {distance_km:.2f} km")
                 else:
@@ -94,6 +101,7 @@ def generate_scenario(scenario_id, propagator, m4v_sat, max_range_km, tle_path):
                     active_windows[name]["end_time"] = t
                     if distance_km < active_windows[name]["min_distance_km"]:
                         active_windows[name]["min_distance_km"] = distance_km
+                        active_windows[name]["direction_vector"] = dir_vec
                         
         # Check if any targets left the 50km bubble
         for name in list(active_windows.keys()):
@@ -107,7 +115,8 @@ def generate_scenario(scenario_id, propagator, m4v_sat, max_range_km, tle_path):
                     "end_time_utc": (w["end_time"].utc_datetime() + timedelta(seconds=30)).isoformat(),
                     "duration_seconds": duration,
                     "min_distance_km": round(w["min_distance_km"], 2),
-                    "priority_value": w["priority_value"]
+                    "priority_value": w["priority_value"],
+                    "direction_vector": w["direction_vector"]
                 })
                 print(f"  [ACCESS END] {name} left range. Total duration: {duration}s")
                 
@@ -120,7 +129,8 @@ def generate_scenario(scenario_id, propagator, m4v_sat, max_range_km, tle_path):
             "end_time_utc": (w["end_time"].utc_datetime() + timedelta(seconds=30)).isoformat(),
             "duration_seconds": duration,
             "min_distance_km": round(w["min_distance_km"], 2),
-            "priority_value": w["priority_value"]
+            "priority_value": w["priority_value"],
+            "direction_vector": w["direction_vector"]
         })
         
     # 5. Save results

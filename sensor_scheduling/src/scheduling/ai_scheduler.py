@@ -114,6 +114,11 @@ def train_student():
     garbage_target = torch.tensor([[0.10, 30.0/300.0, 49.0/50.0]])
     prediction = model(garbage_target)
     print(f"AI Probability to schedule a Garbage Target: {prediction.item():.2%}")
+    
+    # 6. Save the trained model for Phase 3!
+    model_path = project_root / "models" / "student_model.pth"
+    torch.save(model.state_dict(), model_path)
+    print(f"\n-> Successfully saved AI Brain to {model_path.name}")
 
 if __name__ == "__main__":
     train_student()
