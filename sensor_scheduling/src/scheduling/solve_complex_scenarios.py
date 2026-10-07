@@ -81,7 +81,8 @@ def solve_scenario(json_file):
                 
     objective_terms = []
     for i in range(num_objects):
-        objective_terms.append(actual_durations[i] * int(values[i]))
+        # We strictly maximize the Duration (d_i) as requested in Problem Statement (1).docx
+        objective_terms.append(actual_durations[i])
         
     model.Maximize(sum(objective_terms))
     
