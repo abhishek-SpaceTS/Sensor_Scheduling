@@ -31,16 +31,20 @@ This repository provides a complete pipeline:
 ## 📂 Project Structure
 
 ```text
-├── config/                  # YAML configurations (sensor_config, mission_config)
-├── data/
-│   ├── raw/celestrak/       # Raw TLE downloads
-│   └── processed/           # Consolidated visibility windows & AI Labels
-├── src/
-│   ├── data/                # CelesTrak API fetchers and TLE parsers
-│   ├── orbit/               # SGP4 Propagators and 3D math
-│   ├── sensor/              # Visibility geometry engine
-│   └── scheduling/          # OR-Tools (Teacher) & PyTorch (Student) Models
-├── main.py                  # The Master Pipeline Orchestrator
+├── sensor_scheduling/
+│   ├── config/                  # YAML configurations (sensor, mission, adcs)
+│   ├── data/
+│   │   └── processed/
+│   │       └── ai_training_data/ # 1,000 CP-SAT solved schedules & slew table
+│   ├── src/
+│   │   ├── adcs/                # ADCS slew kinematics & physics
+│   │   ├── data/                # CelesTrak API fetchers & generators
+│   │   ├── orbit/               # SGP4 Propagators and 3D math
+│   │   ├── sensor/              # Visibility geometry engine
+│   │   └── simulation/          # Mission simulation environment
+│   ├── generate_cp_sat_dataset.py # CP-SAT parallel dataset generator
+│   └── main.py                  # The Master Pipeline Orchestrator
+├── requirements.txt             # Python dependencies
 └── README.md
 ```
 
@@ -58,7 +62,7 @@ cd Sensor_Scheduling
 ```bash
 pip install -r requirements.txt
 ```
-*(Requires `skyfield`, `ortools`, `torch`, and `pyyaml`)*
+*(Requires `skyfield`, `ortools`, `torch`, `pyyaml`, and `matplotlib`)*
 
 ---
 
