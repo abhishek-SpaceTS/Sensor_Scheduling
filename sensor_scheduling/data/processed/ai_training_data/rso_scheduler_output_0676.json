@@ -1,0 +1,274 @@
+{
+    "n_rsos": 20,
+    "seed": 718,
+    "windows": [
+        [
+            [
+                2132,
+                2432
+            ]
+        ],
+        [
+            [
+                5162,
+                5462
+            ]
+        ],
+        [
+            [
+                1842,
+                2142
+            ]
+        ],
+        [
+            [
+                3967,
+                4267
+            ]
+        ],
+        [
+            [
+                3573,
+                3873
+            ]
+        ],
+        [
+            [
+                1076,
+                1376
+            ]
+        ],
+        [
+            [
+                3294,
+                3594
+            ]
+        ],
+        [
+            [
+                3376,
+                3676
+            ]
+        ],
+        [
+            [
+                4458,
+                4758
+            ]
+        ],
+        [
+            [
+                2331,
+                2631
+            ]
+        ],
+        [
+            [
+                3856,
+                4156
+            ]
+        ],
+        [
+            [
+                5272,
+                5572
+            ]
+        ],
+        [
+            [
+                4470,
+                4770
+            ]
+        ],
+        [
+            [
+                3054,
+                3354
+            ]
+        ],
+        [
+            [
+                5374,
+                5674
+            ]
+        ],
+        [
+            [
+                4916,
+                5216
+            ]
+        ],
+        [
+            [
+                3746,
+                4046
+            ]
+        ],
+        [
+            [
+                4163,
+                4463
+            ]
+        ],
+        [
+            [
+                3348,
+                3648
+            ]
+        ],
+        [
+            [
+                45,
+                345
+            ]
+        ]
+    ],
+    "schedule": [
+        {
+            "rso": 19,
+            "window_idx": 0,
+            "start": 45,
+            "end": 345,
+            "duration": 300
+        },
+        {
+            "rso": 5,
+            "window_idx": 0,
+            "start": 1076,
+            "end": 1376,
+            "duration": 300
+        },
+        {
+            "rso": 2,
+            "window_idx": 0,
+            "start": 1842,
+            "end": 2082,
+            "duration": 240
+        },
+        {
+            "rso": 0,
+            "window_idx": 0,
+            "start": 2132,
+            "end": 2315,
+            "duration": 183
+        },
+        {
+            "rso": 9,
+            "window_idx": 0,
+            "start": 2331,
+            "end": 2364,
+            "duration": 33
+        },
+        {
+            "rso": 0,
+            "window_idx": 0,
+            "start": 2381,
+            "end": 2432,
+            "duration": 51
+        },
+        {
+            "rso": 9,
+            "window_idx": 0,
+            "start": 2450,
+            "end": 2631,
+            "duration": 181
+        },
+        {
+            "rso": 13,
+            "window_idx": 0,
+            "start": 3054,
+            "end": 3354,
+            "duration": 300
+        },
+        {
+            "rso": 18,
+            "window_idx": 0,
+            "start": 3416,
+            "end": 3558,
+            "duration": 142
+        },
+        {
+            "rso": 4,
+            "window_idx": 0,
+            "start": 3573,
+            "end": 3683,
+            "duration": 110
+        },
+        {
+            "rso": 16,
+            "window_idx": 0,
+            "start": 3746,
+            "end": 3958,
+            "duration": 212
+        },
+        {
+            "rso": 10,
+            "window_idx": 0,
+            "start": 4020,
+            "end": 4068,
+            "duration": 48
+        },
+        {
+            "rso": 3,
+            "window_idx": 0,
+            "start": 4103,
+            "end": 4146,
+            "duration": 43
+        },
+        {
+            "rso": 17,
+            "window_idx": 0,
+            "start": 4163,
+            "end": 4437,
+            "duration": 274
+        },
+        {
+            "rso": 12,
+            "window_idx": 0,
+            "start": 4499,
+            "end": 4770,
+            "duration": 271
+        },
+        {
+            "rso": 15,
+            "window_idx": 0,
+            "start": 4916,
+            "end": 5141,
+            "duration": 225
+        },
+        {
+            "rso": 1,
+            "window_idx": 0,
+            "start": 5162,
+            "end": 5391,
+            "duration": 229
+        },
+        {
+            "rso": 14,
+            "window_idx": 0,
+            "start": 5459,
+            "end": 5499,
+            "duration": 40
+        },
+        {
+            "rso": 11,
+            "window_idx": 0,
+            "start": 5542,
+            "end": 5572,
+            "duration": 30
+        },
+        {
+            "rso": 14,
+            "window_idx": 0,
+            "start": 5614,
+            "end": 5674,
+            "duration": 60
+        }
+    ],
+    "objective": 3272.0,
+    "best_bound": 5700.0,
+    "gap": 0.7420537897310513,
+    "status": "FEASIBLE",
+    "time_limit": 30,
+    "verified": true
+}

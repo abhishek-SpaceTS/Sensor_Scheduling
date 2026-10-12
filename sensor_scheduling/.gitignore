@@ -20,7 +20,7 @@ data/processed/visibility_windows/*.json
 data/processed/scheduling_dataset/*.json
 data/processed/complex_labels/
 complex_scenarios/
-ai_training_data*/
+ai_training_data_1/
 *.docx
 *temp_docx*.txt
 

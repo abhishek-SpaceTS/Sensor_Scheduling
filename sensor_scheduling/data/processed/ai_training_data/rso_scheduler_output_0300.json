@@ -1,0 +1,309 @@
+{
+    "n_rsos": 20,
+    "seed": 342,
+    "windows": [
+        [
+            [
+                989,
+                1289
+            ]
+        ],
+        [
+            [
+                1712,
+                2012
+            ]
+        ],
+        [
+            [
+                4781,
+                5081
+            ]
+        ],
+        [
+            [
+                601,
+                901
+            ]
+        ],
+        [
+            [
+                574,
+                874
+            ]
+        ],
+        [
+            [
+                586,
+                886
+            ]
+        ],
+        [
+            [
+                3953,
+                4253
+            ]
+        ],
+        [
+            [
+                749,
+                1049
+            ]
+        ],
+        [
+            [
+                5156,
+                5456
+            ]
+        ],
+        [
+            [
+                4246,
+                4546
+            ]
+        ],
+        [
+            [
+                2502,
+                2802
+            ]
+        ],
+        [
+            [
+                4633,
+                4933
+            ]
+        ],
+        [
+            [
+                308,
+                608
+            ]
+        ],
+        [
+            [
+                4226,
+                4526
+            ]
+        ],
+        [
+            [
+                5309,
+                5609
+            ]
+        ],
+        [
+            [
+                4459,
+                4759
+            ]
+        ],
+        [
+            [
+                2595,
+                2895
+            ]
+        ],
+        [
+            [
+                4051,
+                4351
+            ]
+        ],
+        [
+            [
+                256,
+                556
+            ]
+        ],
+        [
+            [
+                1064,
+                1364
+            ]
+        ]
+    ],
+    "schedule": [
+        {
+            "rso": 18,
+            "window_idx": 0,
+            "start": 256,
+            "end": 556,
+            "duration": 300
+        },
+        {
+            "rso": 3,
+            "window_idx": 0,
+            "start": 601,
+            "end": 692,
+            "duration": 91
+        },
+        {
+            "rso": 4,
+            "window_idx": 0,
+            "start": 719,
+            "end": 749,
+            "duration": 30
+        },
+        {
+            "rso": 7,
+            "window_idx": 0,
+            "start": 786,
+            "end": 816,
+            "duration": 30
+        },
+        {
+            "rso": 5,
+            "window_idx": 0,
+            "start": 856,
+            "end": 886,
+            "duration": 30
+        },
+        {
+            "rso": 0,
+            "window_idx": 0,
+            "start": 989,
+            "end": 1084,
+            "duration": 95
+        },
+        {
+            "rso": 19,
+            "window_idx": 0,
+            "start": 1140,
+            "end": 1170,
+            "duration": 30
+        },
+        {
+            "rso": 0,
+            "window_idx": 0,
+            "start": 1225,
+            "end": 1281,
+            "duration": 56
+        },
+        {
+            "rso": 19,
+            "window_idx": 0,
+            "start": 1334,
+            "end": 1364,
+            "duration": 30
+        },
+        {
+            "rso": 1,
+            "window_idx": 0,
+            "start": 1712,
+            "end": 2012,
+            "duration": 300
+        },
+        {
+            "rso": 10,
+            "window_idx": 0,
+            "start": 2502,
+            "end": 2532,
+            "duration": 30
+        },
+        {
+            "rso": 16,
+            "window_idx": 0,
+            "start": 2599,
+            "end": 2629,
+            "duration": 30
+        },
+        {
+            "rso": 10,
+            "window_idx": 0,
+            "start": 2696,
+            "end": 2754,
+            "duration": 58
+        },
+        {
+            "rso": 16,
+            "window_idx": 0,
+            "start": 2820,
+            "end": 2895,
+            "duration": 75
+        },
+        {
+            "rso": 6,
+            "window_idx": 0,
+            "start": 3953,
+            "end": 4036,
+            "duration": 83
+        },
+        {
+            "rso": 17,
+            "window_idx": 0,
+            "start": 4051,
+            "end": 4081,
+            "duration": 30
+        },
+        {
+            "rso": 6,
+            "window_idx": 0,
+            "start": 4096,
+            "end": 4126,
+            "duration": 30
+        },
+        {
+            "rso": 17,
+            "window_idx": 0,
+            "start": 4142,
+            "end": 4321,
+            "duration": 179
+        },
+        {
+            "rso": 9,
+            "window_idx": 0,
+            "start": 4379,
+            "end": 4433,
+            "duration": 54
+        },
+        {
+            "rso": 15,
+            "window_idx": 0,
+            "start": 4459,
+            "end": 4489,
+            "duration": 30
+        },
+        {
+            "rso": 9,
+            "window_idx": 0,
+            "start": 4516,
+            "end": 4546,
+            "duration": 30
+        },
+        {
+            "rso": 15,
+            "window_idx": 0,
+            "start": 4574,
+            "end": 4734,
+            "duration": 160
+        },
+        {
+            "rso": 2,
+            "window_idx": 0,
+            "start": 4781,
+            "end": 5081,
+            "duration": 300
+        },
+        {
+            "rso": 8,
+            "window_idx": 0,
+            "start": 5156,
+            "end": 5456,
+            "duration": 300
+        },
+        {
+            "rso": 14,
+            "window_idx": 0,
+            "start": 5512,
+            "end": 5609,
+            "duration": 97
+        }
+    ],
+    "objective": 2478.0,
+    "best_bound": 5700.0,
+    "gap": 1.3002421307506054,
+    "status": "FEASIBLE",
+    "time_limit": 30,
+    "verified": true
+}

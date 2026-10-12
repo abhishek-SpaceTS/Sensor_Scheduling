@@ -1,0 +1,246 @@
+{
+    "n_rsos": 20,
+    "seed": 443,
+    "windows": [
+        [
+            [
+                1032,
+                1332
+            ]
+        ],
+        [
+            [
+                174,
+                474
+            ]
+        ],
+        [
+            [
+                5231,
+                5531
+            ]
+        ],
+        [
+            [
+                5297,
+                5597
+            ]
+        ],
+        [
+            [
+                2190,
+                2490
+            ]
+        ],
+        [
+            [
+                2746,
+                3046
+            ]
+        ],
+        [
+            [
+                2364,
+                2664
+            ]
+        ],
+        [
+            [
+                889,
+                1189
+            ]
+        ],
+        [
+            [
+                2281,
+                2581
+            ]
+        ],
+        [
+            [
+                1852,
+                2152
+            ]
+        ],
+        [
+            [
+                105,
+                405
+            ]
+        ],
+        [
+            [
+                2881,
+                3181
+            ]
+        ],
+        [
+            [
+                4701,
+                5001
+            ]
+        ],
+        [
+            [
+                4446,
+                4746
+            ]
+        ],
+        [
+            [
+                4183,
+                4483
+            ]
+        ],
+        [
+            [
+                971,
+                1271
+            ]
+        ],
+        [
+            [
+                2707,
+                3007
+            ]
+        ],
+        [
+            [
+                2629,
+                2929
+            ]
+        ],
+        [
+            [
+                3723,
+                4023
+            ]
+        ],
+        [
+            [
+                1923,
+                2223
+            ]
+        ]
+    ],
+    "schedule": [
+        {
+            "rso": 10,
+            "window_idx": 0,
+            "start": 105,
+            "end": 190,
+            "duration": 85
+        },
+        {
+            "rso": 1,
+            "window_idx": 0,
+            "start": 239,
+            "end": 474,
+            "duration": 235
+        },
+        {
+            "rso": 7,
+            "window_idx": 0,
+            "start": 889,
+            "end": 1189,
+            "duration": 300
+        },
+        {
+            "rso": 0,
+            "window_idx": 0,
+            "start": 1247,
+            "end": 1332,
+            "duration": 85
+        },
+        {
+            "rso": 9,
+            "window_idx": 0,
+            "start": 1852,
+            "end": 2112,
+            "duration": 260
+        },
+        {
+            "rso": 19,
+            "window_idx": 0,
+            "start": 2151,
+            "end": 2181,
+            "duration": 30
+        },
+        {
+            "rso": 4,
+            "window_idx": 0,
+            "start": 2219,
+            "end": 2341,
+            "duration": 122
+        },
+        {
+            "rso": 6,
+            "window_idx": 0,
+            "start": 2364,
+            "end": 2664,
+            "duration": 300
+        },
+        {
+            "rso": 17,
+            "window_idx": 0,
+            "start": 2683,
+            "end": 2815,
+            "duration": 132
+        },
+        {
+            "rso": 11,
+            "window_idx": 0,
+            "start": 2881,
+            "end": 3181,
+            "duration": 300
+        },
+        {
+            "rso": 18,
+            "window_idx": 0,
+            "start": 3723,
+            "end": 4023,
+            "duration": 300
+        },
+        {
+            "rso": 14,
+            "window_idx": 0,
+            "start": 4183,
+            "end": 4459,
+            "duration": 276
+        },
+        {
+            "rso": 13,
+            "window_idx": 0,
+            "start": 4500,
+            "end": 4746,
+            "duration": 246
+        },
+        {
+            "rso": 12,
+            "window_idx": 0,
+            "start": 4788,
+            "end": 5001,
+            "duration": 213
+        },
+        {
+            "rso": 2,
+            "window_idx": 0,
+            "start": 5231,
+            "end": 5295,
+            "duration": 64
+        },
+        {
+            "rso": 3,
+            "window_idx": 0,
+            "start": 5339,
+            "end": 5597,
+            "duration": 258
+        }
+    ],
+    "objective": 3206.0,
+    "best_bound": 5700.0,
+    "gap": 0.7779164067373674,
+    "status": "FEASIBLE",
+    "time_limit": 30,
+    "verified": true
+}
