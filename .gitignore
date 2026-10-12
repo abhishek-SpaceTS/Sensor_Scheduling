@@ -18,6 +18,11 @@ data/raw/celestrak/*.txt
 data/raw/celestrak/*.tle
 data/processed/visibility_windows/*.json
 data/processed/scheduling_dataset/*.json
+data/processed/complex_labels/
+complex_scenarios/
+ai_training_data*/
+*.docx
+*temp_docx*.txt
 
 # Keep the directory structure for data but ignore the files inside
 !data/raw/celestrak/.gitkeep

@@ -93,10 +93,14 @@ def solve_scenario(json_file):
     
     if status == cp_model.OPTIMAL or status == cp_model.FEASIBLE:
         data["is_scheduled"] = [int(solver.BooleanValue(is_scheduled[i])) for i in range(num_objects)]
+        data["start_times"] = [int(solver.Value(starts[i])) if solver.BooleanValue(is_scheduled[i]) else 0 for i in range(num_objects)]
+        data["end_times"] = [int(solver.Value(ends[i])) if solver.BooleanValue(is_scheduled[i]) else 0 for i in range(num_objects)]
         return data
     else:
         # If mathematically infeasible or solver timeout, return array of 0s
         data["is_scheduled"] = [0] * num_objects
+        data["start_times"] = [0] * num_objects
+        data["end_times"] = [0] * num_objects
         return data
 
 if __name__ == "__main__":

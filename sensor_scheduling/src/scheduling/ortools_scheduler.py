@@ -48,7 +48,7 @@ def solve_scenario(windows):
         if t < base_time:
             base_time = t
             
-    d_min = 10 # Minimum useful observation time in seconds
+    d_min = 1 # Minimum useful observation time in seconds
             
     # Decision Variables
     intervals = []
